@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\web1\\OnlineShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|d:\\web1\\onlineshop\\onlineshop\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|d:\\web1\\onlineshop\\onlineshop\\views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|d:\\web1\\onlineshop\\onlineshop\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|d:\\web1\\onlineshop\\onlineshop\\views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,28 +18,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "D:\\web1\\OnlineShop\\OnlineShop\\.gitignore",
-              "RelativeDocumentMoniker": "OnlineShop\\.gitignore",
-              "ToolTip": "D:\\web1\\OnlineShop\\OnlineShop\\.gitignore",
-              "RelativeToolTip": "OnlineShop\\.gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG/SURBVDhPrZRNTgIxFMerDIaEhHgU97JxwUKGGaNeQJdyCY0XUBDWGhg4AB\u002BuvQk7OQCRFTP1fXWmMxUMCT94ee177eu/LVQdFK31kTSJ0WgEIa0SMJ2A6QTHcF9iicQqlYpa/6zv2\u002B2HD5nuEkWR/l4udRzHZBtjGzFor1YrPR6P9WKx0MNhpN96vTuZThyLJ1AJLK/iJFFxjBanBsXIozqkWq2qev1c1Wq19063e0ZBwBNP4JaQ6WRC/i8ajQb5wWBAvnxyghpOqQPkC8L5IEEQKjgxaqOTFsCd65tb6nmlkur1\u002BxwXCgX58KfT7QptwvCK52wrSLcJvtUKOABkQ6HFXwbGsmMRBkchzpjNphLZDSrEn5G1qnsp\u002BPEtheloXouRnXDTTjhb5tXmeyg0IgzuliHp\u002By0OANbiOCDXp1IYo3mMUxBT8/mMA/8QhGH6ZzC4Zwi5ZqoQB9M3h62I/\u002B/SAQpniBmtPvdQyGeYUdgyX8pl05eIBSxmTzQYEYbc42AuJQWLGJNQEcrJG4A4BTHneSW2sqfKOyybkxXMPbAvrx3IsyLzkPJFmUcWYtDntjG6lIvnp8cvKXNIlPoFvstpJRlQPIAAAAAASUVORK5CYII=",
-              "WhenOpened": "2025-06-11T12:04:05.471Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\web1\\OnlineShop\\OnlineShop\\Views\\Products\\Create.cshtml",
               "RelativeDocumentMoniker": "OnlineShop\\Views\\Products\\Create.cshtml",
@@ -64,8 +51,7 @@
               "RelativeToolTip": "OnlineShop\\Controllers\\ProductsController.cs",
               "ViewState": "AgIAAGEAAAAAAAAAAAAiwGcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T12:19:12.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-07T12:19:12.312Z"
             }
           ]
         }
