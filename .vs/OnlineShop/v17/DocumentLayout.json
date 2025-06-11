@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\web1\\OnlineShop\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|d:\\web1\\onlineshop\\onlineshop\\views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|d:\\web1\\onlineshop\\onlineshop\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,40 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\web1\\OnlineShop\\OnlineShop\\Views\\Products\\Create.cshtml",
-              "RelativeDocumentMoniker": "OnlineShop\\Views\\Products\\Create.cshtml",
-              "ToolTip": "D:\\web1\\OnlineShop\\OnlineShop\\Views\\Products\\Create.cshtml",
-              "RelativeToolTip": "OnlineShop\\Views\\Products\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-07T12:39:52.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "D:\\web1\\OnlineShop\\OnlineShop\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "OnlineShop\\Controllers\\ProductsController.cs",
-              "ToolTip": "D:\\web1\\OnlineShop\\OnlineShop\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "OnlineShop\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAiwGcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T12:19:12.312Z"
             }
           ]
         }
