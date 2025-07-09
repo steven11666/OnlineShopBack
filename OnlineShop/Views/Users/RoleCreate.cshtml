@@ -1,0 +1,25 @@
+﻿@model OnlineShop.Areas.Identity.Data.OnlineShopUserRole
+
+@{
+    ViewData["Title"] = "新增角色";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="RoleCreate" method="post">
+    <div class="form-group mb-3" style="max-width: 300px;">
+        <label asp-for="RoleName" class="form-label"></label>
+        <input asp-for="RoleName" class="form-control form-control-sm" />
+        <span asp-validation-for="RoleName" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-sm">建立角色</button>
+</form>
+<div>
+    <a asp-action="RoleList">Back to List</a>
+</div>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success mt-3">@TempData["Success"]</div>
+}

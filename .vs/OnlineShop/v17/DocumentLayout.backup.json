@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\web1\\OnlineShop\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|d:\\web1\\onlineshop\\onlineshop\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|d:\\web1\\onlineshop\\onlineshop\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|d:\\web1\\onlineshop\\onlineshop\\data\\onlineshopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\data\\onlineshopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|d:\\web1\\onlineshop\\onlineshop\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8BB5D40-0DAC-45A5-B39A-2F74C4CDE619}|OnlineShop\\OnlineShop.csproj|solutionrelative:onlineshop\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Order.cs",
+              "DocumentMoniker": "D:\\web1\\OnlineShop\\OnlineShop\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "OnlineShop\\Models\\Order.cs",
+              "ToolTip": "D:\\web1\\OnlineShop\\OnlineShop\\Models\\Order.cs",
+              "RelativeToolTip": "OnlineShop\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T11:58:17.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OnlineShopContext.cs",
+              "DocumentMoniker": "D:\\web1\\OnlineShop\\OnlineShop\\Data\\OnlineShopContext.cs",
+              "RelativeDocumentMoniker": "OnlineShop\\Data\\OnlineShopContext.cs",
+              "ToolTip": "D:\\web1\\OnlineShop\\OnlineShop\\Data\\OnlineShopContext.cs",
+              "RelativeToolTip": "OnlineShop\\Data\\OnlineShopContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T11:36:40.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\web1\\OnlineShop\\OnlineShop\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "OnlineShop\\Models\\Product.cs",
+              "ToolTip": "D:\\web1\\OnlineShop\\OnlineShop\\Models\\Product.cs",
+              "RelativeToolTip": "OnlineShop\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T11:42:31.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\web1\\OnlineShop\\OnlineShop\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "OnlineShop\\Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\web1\\OnlineShop\\OnlineShop\\Controllers\\ProductsController.cs*",
+              "RelativeToolTip": "OnlineShop\\Controllers\\ProductsController.cs*",
+              "ViewState": "AgIAALoAAAAAAAAAAAAywIcAAABxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T11:13:04.439Z",
+              "EditorCaption": ""
             }
           ]
         }

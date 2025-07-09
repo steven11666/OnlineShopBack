@@ -2,40 +2,49 @@
 
 @{
     ViewData["Title"] = "Index";
+    var searchString = ViewData["CurrentFilter"] as string;
 }
 
-<h1>Index</h1>
+<div class="d-flex justify-content-between mb-2">
+    <h1>商品列表</h1>
+    <a asp-action="Create" class="btn btn-sm btn-success align-self-start">
+        <i class="bi bi-plus-lg"></i> 新增商品
+    </a>
+</div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<form asp-action="Index" method="get" class="col-4">
+    <div class="input-group input-group-sm">
+        <input class="form-control" type="text" placeholder="Name" name="searchString" value="@searchString" />
+        <button class="btn btn-sm btn-primary" type="submit">搜尋</button>
+    </div>
+</form>
+
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th></th>
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <th>@Html.DisplayNameFor(model => model.Price)</th>
+            <th>庫存狀態</th>
+            <th>操作</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                <td>
+                    <span class="badge @(item.Stock > 0 ? "bg-success text-white" : "bg-warning text-dark")">
+                        @(item.Stock > 0 ? "有庫存" : "缺貨中")
+                    </span>
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">編輯</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">詳情</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">刪除</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

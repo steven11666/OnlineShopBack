@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,7 @@ using OnlineShop.Models;
 
 namespace OnlineShop.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class ProductsController : Controller
     {
         private readonly OnlineShopContext _context;
@@ -20,9 +22,20 @@ namespace OnlineShop.Controllers
         }
 
         // GET: Products
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Product.ToListAsync());
+            var products = _context.Product
+            .Include(p => p.Category)
+            .AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(searchString))
+            {
+                products = products.Where(p => p.Name.Contains(searchString));
+            }
+
+            ViewData["CurrentFilter"] = searchString;
+
+            return View(await products.ToListAsync());
         }
 
         // GET: Products/Details/5
@@ -33,14 +46,30 @@ namespace OnlineShop.Controllers
                 return NotFound();
             }
 
+            DetailViewModel dvm = new DetailViewModel();  
+
             var product = await _context.Product
-                .FirstOrDefaultAsync(m => m.Id == id);
+                        .Include(p => p.Category)
+                        .FirstOrDefaultAsync(m => m.Id == id);
             if (product == null)
             {
                 return NotFound();
             }
-
-            return View(product);
+            else
+            {
+                dvm.product = product;
+                if (product.Image != null)
+                {
+                    dvm.imgsrc = ViewImage(product.Image);
+                }
+            }
+            return View(dvm);
+        }
+        private string ViewImage(byte[] arrayImage)
+        {
+            // 二進位圖檔轉字串
+            string base64String = Convert.ToBase64String(arrayImage, 0, arrayImage.Length);
+            return "data:image/png;base64," + base64String;
         }
 
         // GET: Products/Create
@@ -69,39 +98,20 @@ namespace OnlineShop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Price")] Product product)
+        public async Task<IActionResult> Create([Bind("Id,Name,Description,Content,Price,Stock,CategoryId")] Product product, IFormFile myimg)
         {
-            if (ModelState.IsValid)
+            if (myimg != null)
             {
-                _context.Add(product);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                using var ms = new MemoryStream();
+                await myimg.CopyToAsync(ms);
+                product.Image = ms.ToArray();
             }
-            return View(product);
+
+            _context.Add(product);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Product product,IFormFile myimg) 
-        {
-            if (ModelState.IsValid) 
-            {
-                if (myimg != null) 
-                {
-                    using (var ms = new MemoryStream()) 
-                    {
-                        myimg.CopyTo(ms);
-                        product.Image = ms.ToArray();
-                    }
-                }
-                _context.Add(product);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["Categories"] = new SelectList(
-                _context.Set<Category>(), "Id", "Nanme", product.CategoryId);
-            return View(product);
-        }
 
         // GET: Products/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -116,6 +126,15 @@ namespace OnlineShop.Controllers
             {
                 return NotFound();
             }
+            else
+            {
+                if (product.Image != null)
+                {
+                    ViewBag.Image = ViewImage(product.Image);
+                }
+            }
+            ViewData["Categories"] = new SelectList(_context.Set<Category>(), "Id", "Name", product.CategoryId); 
+
             return View(product);
         }
 
@@ -124,34 +143,28 @@ namespace OnlineShop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Price")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Content,Price,Stock,CategoryId")] Product product, IFormFile myimg)
         {
-            if (id != product.Id)
+            var originalProduct = await _context.Product.FindAsync(id);
+            if (originalProduct == null) return NotFound();
+
+            originalProduct.Name = product.Name;
+            originalProduct.Description = product.Description;
+            originalProduct.Content = product.Content;
+            originalProduct.Price = product.Price;
+            originalProduct.Stock = product.Stock;
+            originalProduct.CategoryId = product.CategoryId;
+
+            if (myimg != null)
             {
-                return NotFound();
+                using var ms = new MemoryStream();
+                await myimg.CopyToAsync(ms);
+                originalProduct.Image = ms.ToArray();
             }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(product);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ProductExists(product.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(product);
+            _context.Update(originalProduct);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Products/Delete/5

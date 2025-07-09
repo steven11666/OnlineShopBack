@@ -1,0 +1,37 @@
+﻿﻿@using Microsoft.AspNetCore.Identity;
+@using OnlineShop.Areas.Identity.Data
+@model OnlineShopUser
+
+@{
+    ViewData["Title"] = "DeleteUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>刪除使用者</h1>
+
+<h3>確定要刪除?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+
+    <form asp-action="DeleteConfirm">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="UserList">Back to List</a>
+    </form>
+</div>

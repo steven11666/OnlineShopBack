@@ -14,15 +14,26 @@ namespace OnlineShop.Models
         public string Content { get; set; }         
         public int Price { get; set; }              
         public int Stock { get; set; }              
-        public byte[] Image { get; set; }           
+        public byte[]? Image { get; set; }           
 
         public int CategoryId { get; set; }         
         public Category Category { get; set; }
+        public List<Comment> Comments { get; set; }
+
     }
     public class Category
     {
         public int Id { get; set; }
-        public string Name { get; set; }            //類別名稱
+        public string Name { get; set; }            
         public List<Product> Products { get; set; }
+    }
+    public class Comment
+    {
+        public int Id { get; set; }
+        public string UserName { get; set; }
+        public string Content { get; set; }
+        public DateTime Time { get; set; }
+        public int ProductID { get; set; }
+        public Product Product { get; set; }
     }
 }

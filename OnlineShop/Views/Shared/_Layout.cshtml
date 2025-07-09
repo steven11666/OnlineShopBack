@@ -25,7 +25,25 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Index">商品清單</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                帳戶管理
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                                <li><a class="dropdown-item" asp-controller="Users" asp-action="UserList">帳戶列表</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" asp-controller="Users" asp-action="RoleList">角色列表</a></li>
+                                <li><a class="dropdown-item" asp-controller="Users" asp-action="RoleCreate">新增角色</a></li>
+                            </ul>
+                        </li>
+
                     </ul>
+                    <div class="ms-auto">
+                        <partial name="_LoginPartial" />
+                    </div>
                 </div>
             </div>
         </nav>
