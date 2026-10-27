@@ -4,12 +4,12 @@
 
 ## 使用技術
 
-**程式語言：** C#
-**後端框架：** ASP.NET Core MVC
-**資料庫：** Microsoft SQL Server
-**ORM：** Entity Framework Core
-**會員驗證：** ASP.NET Core Identity
-**開發工具：** Visual Studio
+- **程式語言：** C#
+- **後端框架：** ASP.NET Core MVC
+- **資料庫：** Microsoft SQL Server
+- **ORM：** Entity Framework Core
+- **會員驗證：** ASP.NET Core Identity
+- **開發工具：** Visual Studio
 
 ## 專案功能
 
